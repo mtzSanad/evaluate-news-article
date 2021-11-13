@@ -10,8 +10,6 @@ describe('POST /sentiment', function () {
             .post('/sentiment')
             .send({ data: 'https://www.nytimes.com/2021/11/13/insider/dixie-fire-weather-3-d.html' })
         expect(respone.statusCode).toEqual(200)
-        // .expect(function (res) {
-        //     res.body.text = 'Sections';
-        // })
+        expect(respone.body.text).toEqual('Sections')
     });
 });
